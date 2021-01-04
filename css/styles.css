@@ -1,0 +1,649 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 17px
+}
+
+body.active {
+    overflow: hidden;
+    z-index: -1
+}
+
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 0.75s
+}
+
+header ul {
+    display: contents;
+    background: rgb(54, 67, 90);
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px
+}
+
+header li {
+    display: inline-block;
+}
+
+header a {
+    display: block;
+    color: #f8f8f8;
+    padding: 10px
+}
+
+header a:hover {
+    color: #dddddd;
+    text-decoration: none;
+    background: red;
+    border-radius: 4px
+}
+
+header a:focus {
+    color: #ffffff;
+    text-decoration: none
+}
+
+header.active {
+    display: block
+}
+
+header.sticky {
+    position: fixed;
+    z-index: 999
+}
+
+#menu.active {
+    display: block
+}
+
+#mobile-menu-open {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    color: #91a7b6;
+    font-size: 1.5em;
+    z-index: 20;
+    padding: 0 7px;
+    border-radius: 4px;
+    background: #fff
+}
+
+#mobile-menu-close {
+    display: none;
+    text-align: right;
+    width: 100%;
+    background: #fff;
+    font-size: 1.5em;
+    padding-right: 15px;
+    padding-top: 10px;
+    cursor: pointer;
+    color: #c5d7e2
+}
+
+#mobile-menu-close span {
+    font-size: 0.5em;
+    text-transform: uppercase
+}
+
+#mobile-menu-close i {
+    vertical-align: middle
+}
+
+footer {
+    padding: 50px 0
+}
+
+.copyright {
+    padding-top: 20px
+}
+
+.copyright p {
+    margin: 0;
+    color: #74808a
+}
+
+.top {
+    text-align: center
+}
+
+.top span {
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid red;
+    text-align: center
+}
+
+.top i {
+    color: #ffffff
+}
+
+.social {
+    text-align: right
+}
+
+.social ul {
+    margin: 5px 0 0;
+    padding: 0
+}
+
+.social li {
+    display: inline-block;
+    font-size: 1.25em;
+    list-style: none
+}
+
+.social a {
+    display: block;
+    color: #74808a;
+    padding: 10px
+}
+
+.social a:hover {
+    color: #3498db
+}
+
+h2.heading {
+    position: relative;
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+.heading:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    height: 1px;
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
+#lead {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1080px;
+    background: url('../images/fondoweb.png');
+    background-size: cover;
+    padding: 15px;
+    overflow: hidden
+}
+
+#lead-content {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: lighter;
+}
+
+#lead-content h1,
+#lead-content h2 {
+    margin: 0
+}
+
+#lead-content h1 {
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 0.9em
+}
+
+#lead-content #logo {
+    color: red;
+    font-size: 3.5em;
+    margin-top: 1rem;
+}
+
+#lead-content #logo img {
+    width: 40px;
+    margin-left: 0.5rem;
+    margin-top: -1.5rem;
+
+}
+
+#lead-content h2 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 2.20em;
+    margin-bottom: 15px
+}
+
+#lead-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#lead-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    bottom: 15px;
+    color: #ffff;
+}
+
+#lead-down span {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid red;
+    text-align: center
+}
+
+
+#lead-down i {
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    padding-top: 5px
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1, 1)
+    }
+
+    50% {
+        transform: scale(1.2, 1.2)
+    }
+
+    100% {
+        transform: scale(1, 1)
+    }
+}
+
+#about {
+    padding: 50px 15px 20px;
+    background: url('../images/fondoweb.png');
+    background-size: cover;
+}
+
+
+#about h2 {
+    color: #000000;
+    margin-bottom: 50px;
+    float: center;
+}
+
+
+#about p {
+    color: #ffffff;
+    margin: 0;
+    text-align:center;
+    padding: 7rem;
+    
+}
+
+#video{
+  text-align: center;
+}
+
+
+#education {
+    padding: 50px 15px 20px;
+    text-align: center;
+    background: url('../images/fondoweb.png');
+    background-size: cover;
+}
+
+#education h2 {
+    color: #000000;
+    margin-bottom: 50px;
+
+}
+
+.education-block {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    padding: 15px;
+    border: 1px solid #dcd9d9;
+    text-align: justify;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.education-block .education-date {
+    color: red;
+}
+
+.education-block h3 {
+    font-weight: 500;
+    float: left;
+    margin: 0;
+    color: red;
+}
+
+.education-block span {
+    color: #74808a;
+    float: right
+}
+
+.education-block h4 {
+    color: #74808a;
+    clear: both;
+    font-weight: 500;
+    margin: 0 0 15px
+}
+
+
+#experiencia {
+    padding: 50px 15px 20px;
+    text-align: center;
+    background: url('../images/fondoweb.png');
+    background-size: cover;
+}
+
+#experiencia h2 {
+    color: #000000;
+    margin-bottom: 50px;
+
+}
+
+.experiencia-block {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    padding: 15px;
+    border: 1px solid #dcd9d9;
+    text-align: justify;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.experiencia-block .experiencia-date {
+    color: red;
+}
+
+.experiencia-block h3 {
+    font-weight: 500;
+    float: left;
+    margin: 0;
+    color: red;
+}
+
+.experiencia-block span {
+    color: #74808a;
+    float: right
+}
+
+.experiencia-block h4 {
+    color: #74808a;
+    clear: both;
+    font-weight: 500;
+    margin: 0 0 15px
+}
+
+.experiencia-block p {
+    margin: 0;
+    color: #000000;
+    font-size: 0.9em
+}
+
+
+#skills {
+    padding: 50px 15px;
+    text-align: center;
+    background: url('../images/fondoweb.png');
+    background-size: cover;
+}
+
+#skills h2 {
+    color: #374054;
+    margin-bottom: 50px
+}
+
+#skills ul {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px
+}
+
+#skills li {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    color: red;
+    background: white;
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em
+}
+
+#contact {
+    padding: 50px 15px;
+    background: #1f2429;
+    text-align: center;
+    background: url('../images/fondoweb.png');
+    background-size: cover;
+}
+
+#contact h2 {
+    margin: 0 0 15px;
+    color: black;
+    font-weight: 500;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto
+}
+
+#contact-form input,
+#contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+    background: #121a22;
+    color: #fff;
+    transition: 0.5s ease all
+}
+
+#contact-form input::-webkit-input-placeholder,
+#contact-form textarea::-webkit-input-placeholder {
+    color: #fff
+}
+
+#contact-form input:-moz-placeholder,
+#contact-form textarea:-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+
+}
+
+footer{
+    background: url('../images/fondoweb.png');
+    background-size: cover;
+}
+
+
+@media only screen and(max-width: 750px) {
+
+    #experience-timeline:before,
+    #experience-timeline:after {
+        left: 23px
+    }
+
+    .vtimeline-date {
+        width: auto;
+        text-align: left;
+        position: relative;
+        margin-bottom: 15px;
+        display: block;
+        margin-left: 70px
+    }
+
+    .vtimeline-icon {
+        margin-left: 0
+    }
+
+    .vtimeline-content {
+        margin-left: 70px
+    }
+}
+
+@media only screen and(max-width: 992px) {
+    #lead {
+        height: auto;
+        min-height: auto;
+        max-height: auto;
+        padding: 100px 15px
+    }
+
+    #lead-content {
+        position: relative;
+        transform: none;
+        left: auto;
+        top: auto
+    }
+
+    #lead-content h1 {
+        font-size: 4em
+    }
+
+    #lead-content h2 {
+        font-size: 1.75em
+    }
+
+    #about {
+        text-align: center
+    }
+
+    #about p {
+        text-align: left
+    }
+}
+
+@media only screen and(max-width: 768px) {
+    header {
+        position: fixed;
+        display: none;
+        z-index: 999;
+        animation: none;
+        bottom: 0;
+        height: 100%
+    }
+
+    #mobile-menu-open,
+    #mobile-menu-close {
+        display: block
+    }
+
+    #menu {
+        height: 100%;
+        overflow-y: auto;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%
+    }
+
+    #menu li {
+        display: block;
+        margin-bottom: 10px
+    }
+
+    #lead-content h1 {
+        font-size: 2em
+    }
+
+    #lead-content h2 {
+        font-size: 1.3em
+    }
+
+    #lead-content a {
+        padding: 10px 20px
+    }
+
+    #lead-down {
+        display: none
+    }
+
+    .education-block h3,
+    .education-block span {
+        float: none
+    }
+
+    .project-image {
+        display: none
+    }
+
+    .project-info {
+        position: relative;
+        margin: 0;
+        padding: 30px 15px;
+        top: auto;
+        transform: none
+    }
+
+    footer {
+        text-align: center
+    }
+
+    .social {
+        text-align: center
+    }
+}
+
+@media only screen and(max-width: 480px) {
+
+
+    #lead-content h1 {
+        font-size: 1.5em
+    }
+
+    #lead-content h2 {
+        font-size: 1em
+    }
+
+    #lead-content a {
+        font-size: 0.9em;
+        padding: 5px 10px
+    }
+}

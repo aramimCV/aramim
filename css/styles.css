@@ -1,6 +1,13 @@
 body {
+    background: url('../images/fondoweb.png');
+    background-size:100% 20%;
+    /*background-size: auto;*/
+    background-position: center;
+    background-repeat: repeat-y;
+    padding: 10px 200px;
     font-family: 'Helvetica', sans-serif;
     font-size: 17px
+    
 }
 
 body.active {
@@ -47,7 +54,7 @@ header li {
 
 header a {
     display: block;
-    color: #f8f8f8;
+    color: red;
     padding: 10px
 }
 
@@ -140,7 +147,7 @@ footer {
 }
 
 .top i {
-    color: #ffffff
+    color: red;
 }
 
 .social {
@@ -193,7 +200,6 @@ h2.heading {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url('../images/fondoweb.png');
     background-size: cover;
     padding: 15px;
     overflow: hidden
@@ -262,7 +268,7 @@ h2.heading {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #ffff;
+    color: red;
 }
 
 #lead-down span {
@@ -299,7 +305,6 @@ h2.heading {
 
 #about {
     padding: 50px 15px 20px;
-    background: url('../images/fondoweb.png');
     background-size: cover;
 }
 
@@ -312,11 +317,30 @@ h2.heading {
 
 
 #about p {
-    color: #ffffff;
+    color:black;
     margin: 0;
     text-align:center;
     padding: 7rem;
     
+}
+
+/* Buttons */
+
+.white-button a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color:orange;
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+.white-button a:hover {
+    background-color: #a43f49;
+    color: #fff;
 }
 
 #video{
@@ -327,7 +351,6 @@ h2.heading {
 #education {
     padding: 50px 15px 20px;
     text-align: center;
-    background: url('../images/fondoweb.png');
     background-size: cover;
 }
 
@@ -370,11 +393,55 @@ h2.heading {
     margin: 0 0 15px
 }
 
+#otroscursos {
+    padding: 50px 15px 20px;
+    text-align: center;
+    background-size: cover;
+}
+
+#otroscursos h2 {
+    color: #000000;
+    margin-bottom: 50px;
+
+}
+
+.otroscursos-block {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    padding: 15px;
+    border: 1px solid #dcd9d9;
+    text-align: justify;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.otroscursos-block .otroscursos-date {
+    color: red;
+}
+
+.otroscursos-block h3 {
+    font-weight: 500;
+    float: left;
+    margin: 0;
+    color: red;
+}
+
+.otroscursos-block span {
+    color: #74808a;
+    float: right
+}
+
+.otroscursos-block h4 {
+    color: #74808a;
+    clear: both;
+    font-weight: 500;
+    margin: 0 0 15px
+}
+
 
 #experiencia {
     padding: 50px 15px 20px;
     text-align: center;
-    background: url('../images/fondoweb.png');
     background-size: cover;
 }
 
@@ -427,12 +494,11 @@ h2.heading {
 #skills {
     padding: 50px 15px;
     text-align: center;
-    background: url('../images/fondoweb.png');
     background-size: cover;
 }
 
 #skills h2 {
-    color: #374054;
+    color: black;
     margin-bottom: 50px
 }
 
@@ -454,11 +520,26 @@ h2.heading {
     font-size: 1.2em
 }
 
+#portfolio {
+    
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#portfolio h2 {
+    color: #000000;
+    margin-bottom: 50px;
+    float: center;
+}
+
+/*#portfolio p {
+    padding: 10px 200px;
+}*/
+
 #contact {
     padding: 50px 15px;
-    background: #1f2429;
     text-align: center;
-    background: url('../images/fondoweb.png');
     background-size: cover;
 }
 
@@ -499,7 +580,6 @@ h2.heading {
 }
 
 footer{
-    background: url('../images/fondoweb.png');
     background-size: cover;
 }
 
@@ -541,7 +621,8 @@ footer{
         position: relative;
         transform: none;
         left: auto;
-        top: auto
+        top: auto;
+        
     }
 
     #lead-content h1 {
@@ -607,7 +688,8 @@ footer{
 
     .education-block h3,
     .education-block span {
-        float: none
+        float: none;
+        color: red;
     }
 
     .project-image {
@@ -624,6 +706,7 @@ footer{
 
     footer {
         text-align: center
+        
     }
 
     .social {
